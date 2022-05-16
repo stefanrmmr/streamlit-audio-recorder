@@ -16,13 +16,13 @@ def audiorec_demo_app():
     # DESIGN implement changes to the standard streamlit UI/UX
     st.set_page_config(page_title="streamlit_audio_recorder")
     # Design move app further up and remove top padding
-    st.markdown('''<style>.css-1egvi7u {margin-top: -4rem;}</style>''',
+    st.markdown('''<style>.css-1egvi7u {margin-top: -3rem;}</style>''',
         unsafe_allow_html=True)
     # Design change st.Audio to fixed height of 45 pixels
     st.markdown('''<style>.stAudio {height: 45px;}</style>''',
         unsafe_allow_html=True)
 
-    # add Title & Creator information
+    # TITLE and Creator information
     st.title('streamlit audio recorder')
     st.markdown('Implemented by '
         '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
@@ -30,11 +30,11 @@ def audiorec_demo_app():
         '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
     st.write('\n\n')
 
-    # use columns for custom alignment
+    # COLUMNS for custom alignment
     audio_col0, audio_col1 = st.columns([1, 0.5])
 
     with audio_col0:
-        # CREATE INSTANCE of "Streamlit Audio Recorder" - by stefanrmmr
+        # STREAMLIT AUDIO RECORDER Instance
         st_audiorec()
 
 
