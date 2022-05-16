@@ -28,6 +28,7 @@ def audiorec_demo_app():
         '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
         'view project source code on '
         '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
+    st.write('\n\n')
 
 
     # CREATE INSTANCE of "Streamlit Audio Recorder" - by stefanrmmr
