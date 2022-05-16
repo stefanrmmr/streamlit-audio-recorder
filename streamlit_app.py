@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 import os
 
 # import design augmentation for streamlit UX/UI
-import src.streamlit_design as streamlit_design
+import streamlit_design as streamlit_design
 
 # custom component for recording client audio in browser
 parent_dir = os.path.dirname(os.path.abspath(__file__))
@@ -24,7 +24,7 @@ def audiorec_demo_app():
         '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
 
     st_audiorec()
-    
+
 
 if __name__ == '__main__':
 
