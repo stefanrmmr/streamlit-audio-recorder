@@ -1,4 +1,4 @@
-# streamlit_audio_recorder (Streamlit Custom Component)
+# streamlit_audio_recorder (Custom Component)
 
 Implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - (work in progress)<br/>
 Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/><br/>
