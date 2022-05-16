@@ -18,16 +18,13 @@ def audiorec_demo_app():
     # DESIGN implement changes to the standard streamlit UI/UX
     streamlit_design.design_setup()  # switch to primaryColor
 
+        with st.expander("Streamlit Audio Recorder by stefanrmmr", expanded=True):
 
-    with st.expander("Streamlit Audio Recorder by stefanrmmr",
-                     expanded=True):
+        st.title('streamlit audio recorder')
+        st.markdown('Version 1.3.2 - April 2022 - '
+            '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
 
-    st.title('streamlit audio recorder')
-    st.markdown('Version 1.3.2 - April 2022 - '
-        '[@GitHub](https://github.com/stefanrmmr/beatinspect) '
-        '[@Instagram](https://www.instagram.com/beatinspect)')
-
-    st_audiorec()
+        st_audiorec()
 
 if __name__ == '__main__':
 
