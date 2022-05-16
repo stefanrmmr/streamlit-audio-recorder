@@ -25,7 +25,9 @@ def audiorec_demo_app():
         unsafe_allow_html=True)
     # Design change hyperlink href link color
     st.markdown('''<style>.css-v37k9u a {color: #ff4c4b;}</style>''',
-        unsafe_allow_html=True)
+        unsafe_allow_html=True)  # darkmode
+    st.markdown('''<style>.css-nlntq9 a {color: #ff4c4b;}</style>''',
+        unsafe_allow_html=True)  # lightmode
 
     # TITLE and Creator information
     st.title('streamlit audio recorder')
