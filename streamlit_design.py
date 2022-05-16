@@ -8,7 +8,7 @@ def design_setup():
                        page_title="streamlit_audio_recorder")
 
     # Design move app further up and remove top padding
-    st.markdown('''<style>.css-1egvi7u {margin-top: -10rem;}</style>''',
+    st.markdown('''<style>.css-1egvi7u {margin-top: -9rem;}</style>''',
         unsafe_allow_html=True)
 
     # Design hide top header line
