@@ -57,7 +57,7 @@ class StAudioRec extends StreamlitComponentBase<State> {
             onStop={this.onStop_audio}
             type='audio/wav'
             backgroundColor='rgb(15, 17, 22)'
-            foregroundColor='rgb(227, 252, 3)'
+            foregroundColor='rgb(255,76,75)'
             canvasWidth={450}
             canvasHeight={100}
           />
