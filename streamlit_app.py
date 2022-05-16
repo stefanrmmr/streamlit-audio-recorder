@@ -20,11 +20,11 @@ def audiorec_demo_app():
 
     with st.expander("Streamlit Audio Recorder by stefanrmmr", expanded=True):
 
-    st.title('streamlit audio recorder')
-    st.markdown('Version 1.3.2 - April 2022 - '
-        '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
+        st.title('streamlit audio recorder')
+        st.markdown('Version 1.3.2 - April 2022 - '
+            '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
 
-    st_audiorec()
+        st_audiorec()
 
 if __name__ == '__main__':
 
