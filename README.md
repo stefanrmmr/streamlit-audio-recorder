@@ -3,7 +3,7 @@
 Implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - (work in progress)<br/>
 Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/><br/>
 
-<img width="1048" alt="Screenshot 2022-05-16 at 16 58 36" src="https://user-images.githubusercontent.com/82606558/168623035-24578ef3-93e9-44e3-a4b2-47b7a56f5c7e.png"><br/><br/>
+![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png)<br/><br/>
 
 
 ## Component Setup - step by step
