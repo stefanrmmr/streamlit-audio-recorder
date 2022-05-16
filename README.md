@@ -4,3 +4,11 @@ Implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - (work 
 Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/><br/>
 <img width="1155" alt="Screenshot 2022-05-16 at 05 10 27" src="https://user-images.githubusercontent.com/82606558/168513839-2c11c104-66c2-413d-a3c6-879fba5eacaa.png">
 
+## Component Setup - step by step
+1. Copy the folder "st_audiorec" to the top level directory of your streamlit project
+2. Import import "os", "streamlit as st" and "streamlit.components.v1 as components"
+3. Initialize path variables and declare the custom component using the given name
+4. Create an instance of "streamlit-audio-recorder" and record client audio data!
+
+
+<img width="1167" alt="Screenshot 2022-05-16 at 05 37 46" src="https://user-images.githubusercontent.com/82606558/168516152-1a4e9b83-59df-4e7f-8880-7fdb4d0b83b8.png">
