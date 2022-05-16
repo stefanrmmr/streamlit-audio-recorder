@@ -6,7 +6,7 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 
 ## Component Setup - step by step
 1. Copy the folder "st_audiorec" to the top level directory of your streamlit project
-2. Import import "os", "streamlit as st" and "streamlit.components.v1 as components"
+2. Import "os", "streamlit as st" and "streamlit.components.v1 as components"
 3. Initialize path variables and declare the custom component using the given name
 4. Create an instance of "streamlit-audio-recorder" and record client audio data!
 
