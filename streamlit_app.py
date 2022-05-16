@@ -22,9 +22,9 @@ def audiorec_demo_app():
     st.markdown('''<style>.stAudio {height: 45px;}</style>''',
         unsafe_allow_html=True)
 
-    # add title & creator information
+    # add Title & Creator information
     st.title('streamlit audio recorder')
-    st.markdown('Mai 2022 - Implemented by '
+    st.markdown('Implemented by '
         '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
         'view project source code on '
         '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
