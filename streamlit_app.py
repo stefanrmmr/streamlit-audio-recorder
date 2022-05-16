@@ -35,10 +35,8 @@ def audiorec_demo_app():
         '[GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
     st.write('\n\n')
 
-    with st.expander('Audio Recording, Playback & Download', expanded=True):
-
-        # STREAMLIT AUDIO RECORDER Instance
-        st_audiorec()
+    # STREAMLIT AUDIO RECORDER Instance
+    st_audiorec()
 
 
 if __name__ == '__main__':
