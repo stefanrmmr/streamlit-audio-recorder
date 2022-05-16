@@ -33,7 +33,7 @@ def audiorec_demo_app():
     # use columns for custom alignment
     audio_col0, audio_col1 = st.columns([1, 0.5])
 
-    with audio_col1:
+    with audio_col0:
         # CREATE INSTANCE of "Streamlit Audio Recorder" - by stefanrmmr
         st_audiorec()
 
