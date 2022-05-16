@@ -1,8 +1,8 @@
 # streamlit_audio_recorder by stefanrmmr (rs. analytics) - version April 2022
 
+import os
 import streamlit as st
 import streamlit.components.v1 as components
-import os
 
 # custom component for recording client audio in browser
 parent_dir = os.path.dirname(os.path.abspath(__file__))
@@ -20,7 +20,7 @@ def audiorec_demo_app():
                        page_title="streamlit_audio_recorder")
 
     # Design move app further up and remove top padding
-    st.markdown('''<style>.css-1egvi7u {margin-top: -8rem;}</style>''',
+    st.markdown('''<style>.css-1egvi7u {margin-top: -4rem;}</style>''',
         unsafe_allow_html=True)
 
     # Design change st.Audio to fixed height of 45 pixels
@@ -30,6 +30,7 @@ def audiorec_demo_app():
     st.title('streamlit audio recorder')
     st.markdown('Version 1.3.2 - April 2022 - '
         '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
+
 
     # CREATE INSTANCE of "Streamlit Audio Recorder" - by stefanrmmr
     st_audiorec()
