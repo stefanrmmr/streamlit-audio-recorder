@@ -4,11 +4,17 @@ import os
 import streamlit as st
 import streamlit.components.v1 as components
 
-# custom component for recording client audio in browser
+# DARKMODE custom component for recording client audio in browser
 parent_dir = os.path.dirname(os.path.abspath(__file__))
-build_dir = os.path.join(parent_dir, "st_audiorec/frontend/build")
+build_dir_dark = os.path.join(parent_dir, "st_audiorec_dark/frontend/build")
 # specify directory and initialize st_audiorec object functionality
-st_audiorec = components.declare_component("st_audiorec", path=build_dir)
+st_audiorec_dark = components.declare_component("st_audiorec", path=build_dir_dark)
+
+# LIGHTMODE custom component for recording client audio in browser
+parent_dir = os.path.dirname(os.path.abspath(__file__))
+build_dir_light = os.path.join(parent_dir, "st_audiorec_light/frontend/build")
+# specify directory and initialize st_audiorec object functionality
+st_audiorec_light = components.declare_component("st_audiorec", path=build_dir_light)
 
 
 def audiorec_demo_app():
@@ -34,8 +40,15 @@ def audiorec_demo_app():
     audio_col0, audio_col1 = st.columns([1, 0.5])
 
     with audio_col0:
-        # STREAMLIT AUDIO RECORDER Instance
-        st_audiorec()
+        # STREAMLIT AUDIO RECORDER Instance - Darkmode
+        st_audiorec_dark()
+
+    # COLUMNS for custom alignment
+    audio_col0_, audio_col1_ = st.columns([1, 0.5])
+
+    with audio_col0_:
+        # STREAMLIT AUDIO RECORDER Instance - Lightmode
+        st_audiorec_light()
 
 
 if __name__ == '__main__':
