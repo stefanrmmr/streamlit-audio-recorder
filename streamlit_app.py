@@ -30,9 +30,12 @@ def audiorec_demo_app():
         '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
     st.write('\n\n')
 
+    # use columns for custom alignment
+    audio_col0, audio_col1 = st.columns([1, 0.5])
 
-    # CREATE INSTANCE of "Streamlit Audio Recorder" - by stefanrmmr
-    st_audiorec()
+    with audio_col1:
+        # CREATE INSTANCE of "Streamlit Audio Recorder" - by stefanrmmr
+        st_audiorec()
 
 
 if __name__ == '__main__':
