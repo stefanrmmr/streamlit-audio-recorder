@@ -22,25 +22,24 @@ st.markdown('''<style>.css-nlntq9 a {color: #ff4c4b;}</style>''',
 def audiorec_demo_app():
 
     parent_dir = os.path.dirname(os.path.abspath(__file__))
-    # LIGHTMODE custom component for recording client audio in browser
-    # (alternatively there is also source code provided for darkmode design)
-    build_dir_light = os.path.join(parent_dir, "st_audiorec_light/frontend/build")
+    # Custom REACT-based component for recording client audio in browser
+    build_dir = os.path.join(parent_dir, "st_audiorec/frontend/build")
     # specify directory and initialize st_audiorec object functionality
-    st_audiorec_light = components.declare_component("st_audiorec", path=build_dir_light)
+    st_audiorec = components.declare_component("st_audiorec", path=build_dir)
 
     # TITLE and Creator information
     st.title('streamlit audio recorder')
     st.markdown('Implemented by '
         '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
         'view project source code on '
-        '[@GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
+        '[GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
     st.write('\n\n')
 
     # COLUMNS for custom alignment
     audio_col0_, audio_col1_ = st.columns([1, 0.5])
     with audio_col0_:
         # STREAMLIT AUDIO RECORDER Instance
-        st_audiorec_light()
+        st_audiorec()
 
 
 if __name__ == '__main__':
