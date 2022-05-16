@@ -1,0 +1,12 @@
+streamlit
+matplotlib
+numpy
+scipy
+PyWavelets
+librosa
+essentia
+SoundFile
+sounddevice
+wavio
+pydub
+ffmpeg
