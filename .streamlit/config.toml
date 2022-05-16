@@ -2,7 +2,7 @@
 
 # The preset Streamlit theme that your custom theme inherits from.
 # One of "light" or "dark".
-base = "dark"
+base = "light"
 
 # Used to style primary interface elements. It's the color displayed most
 # frequently across your app's widgets (slider, checkbox, buttons)
