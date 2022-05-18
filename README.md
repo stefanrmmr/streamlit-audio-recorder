@@ -5,6 +5,12 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 
 ![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png)<br/>
 
+## Features & Outlook
+- Managing access to your microphone via the browser's Media-API
+- Record, playback and revert audio-captures within the streamlit app
+- Download the final recording to your local system (WAV, 16bit, 44kHz)
+- **SOON -->** Directly return audio-recording-data to Python (binary audio data)
+
 
 ## Component Setup - step by step
 1. Copy the folder "st_audiorec" to the top level directory of your streamlit project
