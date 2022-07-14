@@ -3,6 +3,8 @@
 import os
 import streamlit as st
 import streamlit.components.v1 as components
+import numpy as np
+from  io  import  BytesIO
 
 # DESIGN implement changes to the standard streamlit UI/UX
 st.set_page_config(page_title="streamlit_audio_recorder")
@@ -36,7 +38,16 @@ def audiorec_demo_app():
     st.write('\n\n')
 
     # STREAMLIT AUDIO RECORDER Instance
-    st_audiorec()
+    val = st_audiorec()
+
+    if isinstance(val, dict):
+        ind,val = zip(*val['arr'].items())
+        ind = np.array(ind, dtype=int)
+        val = np.array(val)
+        sorted_ints = val[ind]
+        stream = BytesIO(b"".join([int(v).to_bytes(1, "big") for v in sorted_ints]))
+        wav_bytes = stream.read()
+        st.audio(wav_bytes, format='audio/wav')
 
 
 if __name__ == '__main__':
