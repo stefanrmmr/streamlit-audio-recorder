@@ -40,12 +40,12 @@ def audiorec_demo_app():
 
 
     # STREAMLIT AUDIO RECORDER Instance
-    audio_arraybuffer = st_audiorec()
+    val = st_audiorec()
     # web component returns arraybuffer from WAV-blob
 
-    if isinstance(audio_arraybuffer, dict):  # retrieve audio data
+    if isinstance(val dict):  # retrieve audio data
         with st.spinner('retrieving audio-recording...'):
-            ind, val = zip(*audio_arraybuffer['arr'].items())
+            ind, val = zip(*val['arr'].items())
             ind = np.array(ind, dtype=int)  # convert to np array
             val = np.array(val)             # convert to np array
             sorted_ints = val[ind]
