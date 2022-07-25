@@ -9,7 +9,7 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 - Managing access to your microphone via the browser's Media-API
 - Record, playback and revert audio-captures within the streamlit app
 - Download the final recording to your local system (WAV, 16bit, 44kHz)
-- Directly return audio recording-data to Python backend (arrayBuffer) **NEW**
+- **NEW:** Directly return audio recording-data to Python backend! (arrayBuffer)
 
 
 ## Component Setup - step by step
