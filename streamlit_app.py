@@ -42,7 +42,7 @@ def audiorec_demo_app():
     # STREAMLIT AUDIO RECORDER Instance
     val = st_audiorec()
     # web component returns arraybuffer from WAV-blob
-    st.write('Audio data as received in the Python backend will appear below this message ...')
+    st.write('Audio data received in the Python backend will appear below this message ...')
 
     if isinstance(val, dict):  # retrieve audio data
         with st.spinner('retrieving audio-recording...'):
