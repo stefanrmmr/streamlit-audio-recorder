@@ -66,12 +66,6 @@ class StAudioRec extends StreamlitComponentBase<State> {
             canvasHeight={100}
           />
 
-          <audio
-            id='audio'
-            controls
-            src={this.state.audioDataURL}
-          />
-
         </div>
       </span>
     )
@@ -134,6 +128,17 @@ class StAudioRec extends StreamlitComponentBase<State> {
       this.setState({
         audioDataURL: data.url
       })
+
+      fetch(data.url).then(function(ctx){
+        return ctx.blob()
+      }).then(function(blob){
+        return (new Response(blob)).arrayBuffer()
+      }).then(function(buf){
+        Streamlit.setComponentValue({
+          "arr": new Uint8Array(buf)
+        }) 
+      })
+
     }
 
 
