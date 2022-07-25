@@ -42,7 +42,7 @@ def audiorec_demo_app():
     val = st_audiorec()
     # web component returns arraybuffer from WAV-blob
 
-    if isinstance(val, dict
+    if isinstance(val, dict):
         with st.spinner('retrieving audio-recording...'):
             ind,val = zip(*val['arr'].items())
             ind = np.array(ind, dtype=int)
