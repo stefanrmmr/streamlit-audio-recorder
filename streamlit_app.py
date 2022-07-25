@@ -1,10 +1,11 @@
 # streamlit_audio_recorder by stefanrmmr (rs. analytics) - version April 2022
 
 import os
-import streamlit as st
-import streamlit.components.v1 as components
 import numpy as np
-from  io  import  BytesIO
+import streamlit as st
+from io import BytesIO
+import streamlit.components.v1 as components
+
 
 # DESIGN implement changes to the standard streamlit UI/UX
 st.set_page_config(page_title="streamlit_audio_recorder")
@@ -39,17 +40,21 @@ def audiorec_demo_app():
 
 
     # STREAMLIT AUDIO RECORDER Instance
-    val = st_audiorec()
+    audio_arraybuffer = st_audiorec()
     # web component returns arraybuffer from WAV-blob
 
-    if isinstance(val, dict):
+    if isinstance(audio_arraybuffer, dict):  # retrieve audio data
         with st.spinner('retrieving audio-recording...'):
-            ind,val = zip(*val['arr'].items())
-            ind = np.array(ind, dtype=int)
-            val = np.array(val)
+            ind, val = zip(*audio_arraybuffer['arr'].items())
+            ind = np.array(ind, dtype=int)  # convert to np array
+            val = np.array(val)             # convert to np array
             sorted_ints = val[ind]
             stream = BytesIO(b"".join([int(v).to_bytes(1, "big") for v in sorted_ints]))
             wav_bytes = stream.read()
+
+        # wav_bytes contains audio data in format to be further processed
+        # display audio data as received on the Python side
+        st.write('Audio data as received in the Python backend ...')
         st.audio(wav_bytes, format='audio/wav')
 
 

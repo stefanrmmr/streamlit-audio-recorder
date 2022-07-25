@@ -132,11 +132,13 @@ class StAudioRec extends StreamlitComponentBase<State> {
       fetch(data.url).then(function(ctx){
         return ctx.blob()
       }).then(function(blob){
+        // converting blob to arrayBuffer, this process step needs to be be improved
+        // this operation's time complexity scales exponentially with audio length
         return (new Response(blob)).arrayBuffer()
-      }).then(function(buf){
+      }).then(function(buffer){
         Streamlit.setComponentValue({
-          "arr": new Uint8Array(buf)
-        }) 
+          "arr": new Uint8Array(buffer)
+        })
       })
 
     }
