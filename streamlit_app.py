@@ -41,11 +41,10 @@ def audiorec_demo_app():
 
     # STREAMLIT AUDIO RECORDER Instance
     val = st_audiorec()
-    
-    if isinstance(val, dict):  # retrieve audio data
-        # web component returns arraybuffer from WAV-blob
-        st.write('Audio data as received in the Python backend ...')
+    # web component returns arraybuffer from WAV-blob
+    st.write('Audio data as received in the Python backend will appear below this message ...')
 
+    if isinstance(val, dict):  # retrieve audio data
         with st.spinner('retrieving audio-recording...'):
             ind, val = zip(*val['arr'].items())
             ind = np.array(ind, dtype=int)  # convert to np array
