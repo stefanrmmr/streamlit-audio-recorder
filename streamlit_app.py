@@ -37,16 +37,19 @@ def audiorec_demo_app():
         '[GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
     st.write('\n\n')
 
+
     # STREAMLIT AUDIO RECORDER Instance
     val = st_audiorec()
+    # web component returns arraybuffer from WAV-blob
 
-    if isinstance(val, dict):
-        ind,val = zip(*val['arr'].items())
-        ind = np.array(ind, dtype=int)
-        val = np.array(val)
-        sorted_ints = val[ind]
-        stream = BytesIO(b"".join([int(v).to_bytes(1, "big") for v in sorted_ints]))
-        wav_bytes = stream.read()
+    if isinstance(val, dict
+        with st.spinner('retrieving audio-recording...'):
+            ind,val = zip(*val['arr'].items())
+            ind = np.array(ind, dtype=int)
+            val = np.array(val)
+            sorted_ints = val[ind]
+            stream = BytesIO(b"".join([int(v).to_bytes(1, "big") for v in sorted_ints]))
+            wav_bytes = stream.read()
         st.audio(wav_bytes, format='audio/wav')
 
 
