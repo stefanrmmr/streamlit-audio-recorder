@@ -58,16 +58,29 @@ def audiorec_demo_app():
         st.audio(wav_bytes, format='audio/wav')
 
         data, samplerate = sf.read(io.BytesIO(wav_bytes))
+        
+        #take only first channel
+        wav = data[:,0]
+
+        ### add resample to 4kHz here###
 
         fig, ax = plt.subplots()
         ax.plot(data[:,0])
         ax.set_title(str(samplerate))
         st.pyplot(fig)
 
+        #create preprocessor object
         preprocessor = preprocess.AudioPreprocessor()
+
+        #load model
         model = keras.models.load_model('ResNet.h5', compile=False)
+
+        #create predictor object
         predictor = predict.MyPredictor(model, preprocessor)
-        predictor.predict(wav)
+
+        #predict file
+        y_pred = predictor.predict(wav)
+
 if __name__ == '__main__':
 
     # call main function
