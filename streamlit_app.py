@@ -64,10 +64,10 @@ def audiorec_demo_app():
         ax.set_title(str(samplerate))
         st.pyplot(fig)
 
-        #preprocessor = preprocess.AudioPreprocessor()
+        preprocessor = preprocess.AudioPreprocessor()
         model = keras.models.load_model('ResNet.h5', compile=False)
-        #predictor = predict.MyPredictor(model, preprocessor)
-
+        predictor = predict.MyPredictor(model, preprocessor)
+        predictor.predict(wav)
 if __name__ == '__main__':
 
     # call main function
