@@ -10,6 +10,10 @@ import soundfile as sf
 from matplotlib import pyplot as plt
 import keras
 import tensorflow as tf
+import predict
+import preprocess
+import librosa
+
 
 # DESIGN implement changes to the standard streamlit UI/UX
 st.set_page_config(page_title="streamlit_audio_recorder")
@@ -57,16 +61,18 @@ def audiorec_demo_app():
         # display audio data as received on the Python side
         st.audio(wav_bytes, format='audio/wav')
 
-        data, samplerate = sf.read(io.BytesIO(wav_bytes))
+        data_origin, samplerate = sf.read(io.BytesIO(wav_bytes))
+        
         
         #take only first channel
-        wav = data[:,0]
+        wav = data_origin[:,0]
 
         ### add resample to 4kHz here###
+        data = librosa.resample(wav, samplerate, 4000)   
 
         fig, ax = plt.subplots()
-        ax.plot(data[:,0])
-        ax.set_title(str(samplerate))
+        ax.plot(wav)
+        ax.set_title(str(4000))
         st.pyplot(fig)
 
         #create preprocessor object
@@ -80,6 +86,8 @@ def audiorec_demo_app():
 
         #predict file
         y_pred = predictor.predict(wav)
+
+        st.write(y_pred, samplerate)
 
 if __name__ == '__main__':
 
