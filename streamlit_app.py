@@ -5,7 +5,11 @@ import numpy as np
 import streamlit as st
 from io import BytesIO
 import streamlit.components.v1 as components
-
+import io
+import soundfile as sf
+from matplotlib import pyplot as plt
+import keras
+import tensorflow as tf
 
 # DESIGN implement changes to the standard streamlit UI/UX
 st.set_page_config(page_title="streamlit_audio_recorder")
@@ -31,11 +35,7 @@ def audiorec_demo_app():
     st_audiorec = components.declare_component("st_audiorec", path=build_dir)
 
     # TITLE and Creator information
-    st.title('streamlit audio recorder')
-    st.markdown('Implemented by '
-        '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
-        'view project source code on '
-        '[GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
+    st.title('RespiratorAI')
     st.write('\n\n')
 
 
@@ -57,6 +57,16 @@ def audiorec_demo_app():
         # display audio data as received on the Python side
         st.audio(wav_bytes, format='audio/wav')
 
+        data, samplerate = sf.read(io.BytesIO(wav_bytes))
+
+        fig, ax = plt.subplots()
+        ax.plot(data[:,0])
+        ax.set_title(str(samplerate))
+        st.pyplot(fig)
+
+        #preprocessor = preprocess.AudioPreprocessor()
+        model = keras.models.load_model('ResNet.h5', compile=False)
+        #predictor = predict.MyPredictor(model, preprocessor)
 
 if __name__ == '__main__':
 
