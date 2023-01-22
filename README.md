@@ -8,26 +8,39 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 ## Features & Outlook
 - Managing access to your microphone via the browser's Media-API
 - Record, playback and revert audio-captures within the streamlit app
-- Download the final recording to your local system (WAV, 16bit, 44kHz)
+- Download the final recording to your local system (WAV, 16 bit, 44.1 kHz)
 - **NEW:** Directly return audio recording-data to Python backend! (arrayBuffer)
+- **NEW:** Easier to get started and updated step by step tutorial for component usage!
 
 
 ## Component Setup - step by step
-1. Copy the folder "st_audiorec" to the top level directory of your streamlit project
-2. Import "os", "streamlit as st" and "streamlit.components.v1 as components"
+1. Import and install relevant libraries to your Python project. 
 ```
 import os
+import numpy as np
 import streamlit as st
+from io import BytesIO
 import streamlit.components.v1 as components
 ```
-3. Initialize path variables and declare the custom component using the given name
+2. Add the folder `/st_audiorec` to the top level directory of your project.<br><br>
+3. Add the file `st_custom_components.py` to your project wherever you like.<br><br>
+4. Import the function `st_audiorec()` to your main streamlit application code.
 ```
-parent_dir = os.path.dirname(os.path.abspath(__file__))
-build_dir = os.path.join(parent_dir, "st_audiorec/frontend/build")
-st_audiorec = components.declare_component("st_audiorec", path=build_dir)
+from st_custom_components import st_audiorec
 ```
-4. Create an instance of "streamlit-audio-recorder" and record client audio data! 🎈<br/>
+5. Add an instance of the audio recorder component to your streamlit app's code.
+```
+wav_audio_data = st_audiorec()
 
+if wav_audio_data is not None:
+    # display audio data as received on the backend
+    st.audio(wav_audio_data, format='audio/wav')
+    
+# INFO: by calling the function an instance of the audio recorder is created
+# INFO: once a recording is completed, audio data will be saved to wav_audio_data
 ```
-st_audiorec()
-```
+6. Start this repository ☆ to show your support! Enjoy recording audio inside your streamlit app! 🎈 
+
+
+
+
