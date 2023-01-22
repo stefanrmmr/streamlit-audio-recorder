@@ -40,7 +40,8 @@ if wav_audio_data is not None:
 # INFO: by calling the function an instance of the audio recorder is created
 # INFO: once a recording is completed, audio data will be saved to wav_audio_data
 ```
-**6.** Start this repository ☆ to show your support! Enjoy recording audio inside your streamlit app! 🎈 
+**6.** Start this repository ☆ to support my journey as a software developer!<br><br>
+**7.** Enjoy recording audio inside your streamlit app! Yours, Stefan 🎈 
 
 
 
