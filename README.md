@@ -17,19 +17,13 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 ## Component Setup - step by step
 **1.** Import and install relevant libraries to your Python project. 
 ```
-import os
-import numpy as np
-import streamlit as st
-from io import BytesIO
-import streamlit.components.v1 as components
+pip install st-audio-recorder
 ```
-**2.** Add the folder `/st_audiorec` to the top level directory of your project.<br><br>
-**3.** Add the file `st_custom_components.py` to your project wherever you like.<br><br>
-**4.** Import the function `st_audiorec()` to your main streamlit application code.
+**2.** Import the function `st_audiorec()` to your main streamlit application code.
 ```
-from st_custom_components import st_audiorec
+from streamlit_audio_recorder.st_custom_components import st_audiorec
 ```
-**5.** Add an instance of the audio recorder component to your streamlit app's code.
+**3.** Add an instance of the audio recorder component to your streamlit app's code.
 ```
 wav_audio_data = st_audiorec()
 
@@ -40,7 +34,7 @@ if wav_audio_data is not None:
 # INFO: by calling the function an instance of the audio recorder is created
 # INFO: once a recording is completed, audio data will be saved to wav_audio_data
 ```
-**6. Enjoy recording audio inside your streamlit app! 🎈**
+**4. Enjoy recording audio inside your streamlit app! 🎈**
 
 Feel free to reach out to me in case you have any questions! <br>
 Pls consider leaving a `star` ☆ with this repository to show your support.
