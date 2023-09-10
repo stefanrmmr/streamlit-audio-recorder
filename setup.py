@@ -9,7 +9,7 @@ setuptools.setup(
     version="0.0.1",
     author="Stefan Rummer",
     author_email="stefan.rummer@outlook.com",
-    description="Streamlit Custom Component that enables recording audio from the client's mic in apps that are deployed to the web. (via browser Media-API, REACT-based)",
+    description="[steamlit-audio-recorder by stefanrmmr] Streamlit Custom Component that enables recording audio from the client's mic in apps that are deployed to the web. (via browser Media-API, REACT-based)",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/stefanrmmr/streamlit-audio-recorder",
