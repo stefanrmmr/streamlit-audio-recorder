@@ -1,7 +1,7 @@
 # Streamlit Audio Recorder
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://audiorecorder.streamlit.app/)
-
+[![PyPI Latest Release](https://img.shields.io/pypi/v/streamlit-audiorec.svg)](https://pypi.org/project/streamlit-audiorec/) 
 
 Custom component, implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/), <br/>
 based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/>
