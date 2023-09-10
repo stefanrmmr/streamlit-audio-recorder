@@ -1,7 +1,7 @@
 # streamlit_audio_recorder by stefanrmmr (rs. analytics) - version January 2023
 
 import streamlit as st
-from st_custom_components import st_audiorec
+from component import st_audiorec
 
 # DESIGN implement changes to the standard streamlit UI/UX
 # --> optional, not relevant for the functionality of the component!
