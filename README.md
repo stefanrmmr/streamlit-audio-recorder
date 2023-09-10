@@ -18,12 +18,17 @@ based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder/) '
 - **NEW:** **PIP-INSTALL**, Add streamlit-audio-recorder to your project using PyPI
 
 ## Component Setup - PIP Install 
+**1.** install the component
 ```
 pip install streamlit-audiorec
 ```
+**2.** import the component to your project 
+```
+from st_audiorec import streamlit_audio_recorder
+```
 
 ## Component Setup - Manual
-**1.** Import and install relevant libraries to your Python project. :D
+**1.** Import and install relevant libraries to your Python project
 ```
 import os
 import numpy as np
