@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-audiorec",
-    version="0.0.3",
+    version="0.0.4",
     author="Stefan Rummer",
     author_email="stefan.rummer@outlook.com",
     description="Record audio from the user's microphone in apps that are deployed to the web. (via Browser Media-API) [GitHub ☆ 160+: steamlit-audio-recorder]",

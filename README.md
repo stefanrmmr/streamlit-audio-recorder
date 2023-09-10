@@ -4,9 +4,9 @@
 [![PyPI Latest Release](https://img.shields.io/pypi/v/streamlit-audiorec.svg)](https://pypi.org/project/streamlit-audiorec/) 
 
 Custom component, implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/), <br/>
-based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/>
+based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder/) 's [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder/) <br/>
 
-![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png)<br/>
+![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png) <br/>
 
 ## Features & Outlook
 - Managing access to your microphone via the browser's Media-API
