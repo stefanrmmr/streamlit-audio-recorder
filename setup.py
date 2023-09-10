@@ -5,14 +5,14 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
-    name="streamlit-audio-recorder",
-    version="0.0.1",
+    name="streamlit-audiorec",
+    version="0.0.3",
     author="Stefan Rummer",
     author_email="stefan.rummer@outlook.com",
-    description="[steamlit-audio-recorder by stefanrmmr] Streamlit Custom Component that enables recording audio from the client's mic in apps that are deployed to the web. (via browser Media-API, REACT-based)",
+    description="Record audio from the user's microphone in apps that are deployed to the web. (via Browser Media-API) [GitHub ☆ 160+: steamlit-audio-recorder]",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/stefanrmmr/streamlit-audio-recorder",
+    url="https://github.com/stefanrmmr/streamlit_audio_recorder",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[],

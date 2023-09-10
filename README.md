@@ -1,10 +1,10 @@
-# streamlit_audio_recorder (Custom Component)
+# Streamlit Audio Recorder
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://audiorecorder.streamlit.app/)
 
 
-Implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) <br/>
-Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/>
+Custom component, implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/), <br/>
+based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder)<br/>
 
 ![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png)<br/>
 
@@ -18,7 +18,9 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 - **NEW:** **PIP-INSTALL**, Add streamlit-audio-recorder to your project using PyPI
 
 ## Component Setup - PIP Install 
-1. asfasdflksdf WIP
+```
+pip install streamlit-audiorec
+```
 
 ## Component Setup - Manual
 **1.** Import and install relevant libraries to your Python project. :D
