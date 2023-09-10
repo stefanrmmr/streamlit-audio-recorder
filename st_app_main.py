@@ -26,6 +26,7 @@ def audiorec_demo_app():
     st.markdown('Implemented by '
         '[Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/) - '
         'view project source code on '
+                
         '[GitHub](https://github.com/stefanrmmr/streamlit_audio_recorder)')
     st.write('\n\n')
 

@@ -10,12 +10,12 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 - Record, playback and revert audio-captures within the streamlit app
 - Download the final recording to your local system (WAV, 16 bit, 44.1 kHz)
 - Directly return audio recording-data to Python backend! (arrayBuffer)<br><br>
-- **NEW:** Reduced repo size by removal of redundant node-modules! (393Mb --> 70Mb)
+- **NEW:** Reduced repo size by removal of redundant node-modules! (~~393Mb~~ --> 70Mb)
 - **NEW:** Simplified SETUP TUTORIAL, that will get you to record audio within no time!
 
 
 ## Component Setup - step by step
-**1.** Import and install relevant libraries to your Python project. 
+**1.** Import and install relevant libraries to your Python project. :D
 ```
 import os
 import numpy as np
