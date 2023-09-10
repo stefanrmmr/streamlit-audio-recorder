@@ -12,9 +12,12 @@ Based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder)'s 
 - Directly return audio recording-data to Python backend! (arrayBuffer)<br><br>
 - **NEW:** Reduced repo size by removal of redundant node-modules! (~~393Mb~~ --> 70Mb)
 - **NEW:** Simplified SETUP TUTORIAL, that will get you to record audio within no time!
+- **NEW:** **PIP-INSTALL**, Add streamlit-audio-recorder to your project using PyPI
 
+## Component Setup - PIP Install 
+1. asfasdflksdf WIP
 
-## Component Setup - step by step
+## Component Setup - Manual
 **1.** Import and install relevant libraries to your Python project. :D
 ```
 import os
@@ -24,10 +27,10 @@ from io import BytesIO
 import streamlit.components.v1 as components
 ```
 **2.** Add the folder `/st_audiorec` to the top level directory of your project.<br><br>
-**3.** Add the file `st_custom_components.py` to your project wherever you like.<br><br>
+**3.** Add the file `component.py` (or its contents) to your project wherever you like.<br><br>
 **4.** Import the function `st_audiorec()` to your main streamlit application code.
 ```
-from st_custom_components import st_audiorec
+from component import st_audiorec
 ```
 **5.** Add an instance of the audio recorder component to your streamlit app's code.
 ```
