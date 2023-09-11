@@ -15,18 +15,17 @@ based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder/) '
 - Directly return audio recording-data to Python backend! - **arrayBuffer format**<br>
 
 ## Component Setup & Usage Guide
-**1.** PIP Install the component (download from PyPI)
+**STEP 1.** PIP Install the component (download from PyPI)
 ```
 pip install streamlit-audiorec
 ```
-**2.** Import and Initialize the component (at the top of your script)
+**STEP 2.** Import and Initialize the component (at the top of your script)
 ```
-from st_audiorec import streamlit_audio_recorder
+from st_audiorec import st_audiorec
 ```
-
-**3.** Add an Instance of the audio recorder to your streamlit app's code.
+**STEP 3.** Add an Instance of the audio recorder to your streamlit app's code.
 ```
-wav_audio_data = streamlit_audio_recorder()
+wav_audio_data = st_audiorec()
 
 if wav_audio_data is not None:
     # display audio data as received on the backend
