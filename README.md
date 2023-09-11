@@ -1,12 +1,14 @@
 # Streamlit Audio Recorder
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://audiorecorder.streamlit.app/)
-[![PyPI version](https://badge.fury.io/py/streamlit-audiorec.svg)](https://badge.fury.io/py/streamlit-audiorec)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/streamlit-audiorec)](https://pypi.org/project/streamlit-audiorec/)
+[![Generic badge](https://img.shields.io/badge/PyPI-pip_install_streamlit--audiorec-white.svg)](https://pypi.org/project/streamlit-audiorec/)
+[![Generic badge](https://img.shields.io/badge/Package-v0.1.2-blue.svg)](https://pypi.org/project/streamlit-audiorec/)
+[![GitHub license](https://img.shields.io/badge/Licence-MIT-gr.svg)](https://github.com/stefanrmmr/streamlit-audio-recorder/blob/main/LICENCE)
+
 
 Custom component, implemented by [Stefan Rummer](https://www.linkedin.com/in/stefanrmmr/), <br/>
 based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder/) 's [Audio-React-Recorder](https://www.npmjs.com/package/audio-react-recorder/) <br/>
+
 
 ![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png) <br/>
 
@@ -22,15 +24,14 @@ based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder/) '
 pip install streamlit-audiorec
 ```
 **2.** Import and Initialize the component (at the top of your script)
-```
+```python
 from st_audiorec import st_audiorec
 ```
 **3.** Add an Instance of the audio recorder to your streamlit app's code.
-```
+```python 
 wav_audio_data = st_audiorec()
 
 if wav_audio_data is not None:
-    # display audio data as received on the backend
     st.audio(wav_audio_data, format='audio/wav')
 ```
 **4. Enjoy recording audio inside your streamlit app! 🎈**
