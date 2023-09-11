@@ -8,31 +8,28 @@ based on [doppelgunner](https://github.com/doppelgunner/audio-react-recorder/) '
 
 ![Screenshot 2022-05-16 at 16 58 36](https://user-images.githubusercontent.com/82606558/168626886-de128ffa-a3fe-422f-a748-395c29fa42f9.png) <br/>
 
-## Features & Outlook
+## Features & Specs
 - Manage access to the user's microphone via the **browser's Media-API**
 - Record, playback and revert audio-recordings in apps **deployed to the web**
 - Download the final recording to your local system! - **WAV, 16 bit, 44.1 kHz**
 - Directly return audio recording-data to Python backend! - **arrayBuffer format**<br>
 
-## Component Setup & Usage Guide
-**STEP 1.** PIP Install the component (download from PyPI)
+## Setup & How to Use
+**1.** PIP Install the component (download from PyPI)
 ```
 pip install streamlit-audiorec
 ```
-**STEP 2.** Import and Initialize the component (at the top of your script)
+**2.** Import and Initialize the component (at the top of your script)
 ```
 from st_audiorec import st_audiorec
 ```
-**STEP 3.** Add an Instance of the audio recorder to your streamlit app's code.
+**3.** Add an Instance of the audio recorder to your streamlit app's code.
 ```
 wav_audio_data = st_audiorec()
 
 if wav_audio_data is not None:
     # display audio data as received on the backend
     st.audio(wav_audio_data, format='audio/wav')
-    
-# INFO: by calling the function an instance of the audio recorder is created
-# INFO: once a recording is completed, audio data will be saved to wav_audio_data
 ```
 **4. Enjoy recording audio inside your streamlit app! 🎈**
 
